@@ -22,8 +22,29 @@ public class MatrixMultiplication {
             TODO
                 Perform the calculation and store the final values in tempMatrixProduct
             */
+            List<List<Integer>> result1 = new ArrayList<>();
+            for (int i = 0 ; i < matrix_A.size()/2 ; i++) {
+                for (int j = 0 ; j < matrix_B.get(i).size()/2 ; j++) {
+                    result1.add(matrix_A.get(i));
+                }
+            }
+            for (int i = 0 ; i < matrix_A.size()/2 ; i++) {
+                for (int j = matrix_B.get(i).size()/2 ; j < matrix_B.get(i).size() ; j++) {
+
+                }
+            }
+            for (int i = matrix_A.size()/2 ; i < matrix_A.size() ; i++) {
+                for (int j = 0 ; j < matrix_B.get(i).size()/2 ; j++) {
+
+                }
+            }
+            for (int i = matrix_A.size()/2 ; i < matrix_A.size() ; i++) {
+                for (int j = matrix_B.get(i).size() ; j < matrix_B.get(i).size()/2 ; j++) {
+
+                }
+            }
         }
-        public List<List<Integer>> multiplyngMatrix(List<List<Integer>> matrix_A, List<List<Integer>> matrix_B) {
+        public List<List<Integer>> multiplyingMatrix(List<List<Integer>> matrix_A, List<List<Integer>> matrix_B) { //this method will multiply the matrices
             int rows1 = matrix_A.size();
             int cols1 = matrix_A.get(0).size();
             int cols2 = matrix_B.get(0).size();
@@ -58,11 +79,6 @@ public class MatrixMultiplication {
             Each thread should calculate one block of the final matrix product. Each block should be a quarter of the final matrix.
             Combine the 4 resulting blocks to create the final matrix product and return it.
          */
-        for (int i = 0 ; i < matrix_A.size()/2 ; i++) {
-            for (int j = 0 ; j < matrix_B.size() ; j++) {
-
-            }
-        }
         BlockMultiplier blockMultiplier1 = new BlockMultiplier(matrix_A , matrix_B);
         Thread thread1 = new Thread(blockMultiplier1);
         BlockMultiplier blockMultiplier2 = new BlockMultiplier(matrix_A , matrix_B);

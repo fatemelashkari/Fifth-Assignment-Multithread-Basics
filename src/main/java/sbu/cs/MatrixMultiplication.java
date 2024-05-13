@@ -48,7 +48,6 @@ public class MatrixMultiplication {
             return result;
         }
     }
-
     // ---------------------------------- combining the four matrices(blocks) together ------------------------------------------
     public List<List<Integer>> khodeMatrix (List<List<Integer>> block1 , List<List<Integer>> block2 , List<List<Integer>> block3 , List<List<Integer>> block4) {
         // block 1 : up & left

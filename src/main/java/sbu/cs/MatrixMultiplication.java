@@ -176,7 +176,7 @@ public class MatrixMultiplication {
         row1A.add(13);
         row1A.add(14);
         List<Integer> row2B = new ArrayList<>();
-        row1A.add(15);
+        row1A.add(17);
         row1A.add(16);
         List<Integer> row3B = new ArrayList<>();
         row1A.add(17);

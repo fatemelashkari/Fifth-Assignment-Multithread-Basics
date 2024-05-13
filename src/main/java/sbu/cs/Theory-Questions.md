@@ -47,4 +47,30 @@ public class Main {
 #### Running in: main
 ### Why :
 #### when we do not initialize a new Thread it will consider the default thread means main thread then the current thread will be main thread
+### Third Code :
+```
+public class JoinThread extends Thread {
+    public void run() {
+        System.out.println("Running in: " + Thread.currentThread().getName());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        JoinThread thread = new JoinThread();
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Back to: " + Thread.currentThread().getName());
+    }
+}
+```
+### Answer :
+#### because the join() method causes this event :  the calling thread to wait for the specified thread to be finished :
+#### 1. we are taking an object from that class which will run the thread
+#### 2. we call start() method for that thread
+#### 3. then we are calling the join() method for that thread which is meaning this that the calling thread will wait for the specific thread to be ran and executed then it will continue which in this code the Mian thread will wait for the object thread to be executed then the Main thread will continue****
 
